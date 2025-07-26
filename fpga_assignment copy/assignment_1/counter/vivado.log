@@ -1,0 +1,931 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Jul 22 16:30:58 2025
+# Process ID: 6535
+# Current directory: /home/hhussien/fpga_assignment/assignment_1/counter
+# Command line: vivado
+# Log file: /home/hhussien/fpga_assignment/assignment_1/counter/vivado.log
+# Journal file: /home/hhussien/fpga_assignment/assignment_1/counter/vivado.jou
+# Running On: hhussien-lx01.engeu1.analog.com, OS: Linux, CPU Frequency: 2793.437 MHz, CPU Physical cores: 6, Host memory: 16494 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/hhussien/fpga_assignment/assignment_1/counter/counter.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 9280.816 ; gain = 337.625 ; free physical = 9156 ; free virtual = 22123
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'clock_divider'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'clock_divider' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj clock_divider_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+execute_script: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 9322.102 ; gain = 0.000 ; free physical = 8974 ; free virtual = 22017
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot clock_divider_behav xil_defaultlib.clock_divider xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot clock_divider_behav xil_defaultlib.clock_divider xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "clock_divider_behav -key {Behavioral:sim_1:Functional:clock_divider} -tclbatch {clock_divider.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source clock_divider.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'clock_divider_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 9409.293 ; gain = 87.191 ; free physical = 8929 ; free virtual = 22053
+add_force {/clock_divider/clk} -radix hex {1 0ns} {0 62500ps} -repeat_every 125000ps
+add_force {/clock_divider/rst} -radix hex {0 0ns}
+run 250 ns
+run 125 ns
+run 100 ns
+add_force {/clock_divider/rst} -radix hex {1 0ns}
+run 1250 ns
+run 1250 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+file mkdir /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1
+file mkdir /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new
+close [ open /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc w ]
+add_files -fileset constrs_1 /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc
+INFO: [Device 21-403] Loading part xc7z020clg484-2
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0
+set_property -dict [list \
+  CONFIG.CLKOUT1_DRIVES {BUFG} \
+  CONFIG.CLKOUT1_JITTER {449.895} \
+  CONFIG.CLKOUT1_PHASE_ERROR {310.955} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {8} \
+  CONFIG.CLKOUT2_DRIVES {BUFG} \
+  CONFIG.CLKOUT3_DRIVES {BUFG} \
+  CONFIG.CLKOUT4_DRIVES {BUFG} \
+  CONFIG.CLKOUT5_DRIVES {BUFG} \
+  CONFIG.CLKOUT6_DRIVES {BUFG} \
+  CONFIG.CLKOUT7_DRIVES {BUFG} \
+  CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {42} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {105} \
+  CONFIG.MMCM_COMPENSATION {ZHOLD} \
+  CONFIG.MMCM_DIVCLK_DIVIDE {5} \
+  CONFIG.PRIMITIVE {PLL} \
+] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0
+export_ip_user_files -of_objects [get_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+INFO: [Vivado 12-23855] The given sub-design is auto disabled, no action will be taken: '/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci'
+export_simulation -of_objects [get_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory /home/hhussien/fpga_assignment/assignment_1/counter/counter.ip_user_files/sim_scripts -ip_user_files_dir /home/hhussien/fpga_assignment/assignment_1/counter/counter.ip_user_files -ipstatic_source_dir /home/hhussien/fpga_assignment/assignment_1/counter/counter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/modelsim} {questa=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/questa} {xcelium=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/xcelium} {vcs=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/vcs} {riviera=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close [ open /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/counter_3bits.v w ]
+add_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/counter_3bits.v
+update_compile_order -fileset sources_1
+close [ open /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/top.v w ]
+add_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/top.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs clk_wiz_0_synth_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0
+[Tue Jul 22 16:52:06 2025] Launched clk_wiz_0_synth_1...
+Run output will be captured here: /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/clk_wiz_0_synth_1/runme.log
+wait_on_run clk_wiz_0_synth_1
+[Tue Jul 22 16:52:06 2025] Waiting for clk_wiz_0_synth_1 to finish...
+[Tue Jul 22 16:52:11 2025] Waiting for clk_wiz_0_synth_1 to finish...
+[Tue Jul 22 16:52:16 2025] Waiting for clk_wiz_0_synth_1 to finish...
+[Tue Jul 22 16:52:21 2025] Waiting for clk_wiz_0_synth_1 to finish...
+[Tue Jul 22 16:52:31 2025] Waiting for clk_wiz_0_synth_1 to finish...
+[Tue Jul 22 16:52:41 2025] Waiting for clk_wiz_0_synth_1 to finish...
+[Tue Jul 22 16:52:51 2025] Waiting for clk_wiz_0_synth_1 to finish...
+[Tue Jul 22 16:53:01 2025] Waiting for clk_wiz_0_synth_1 to finish...
+[Tue Jul 22 16:53:21 2025] Waiting for clk_wiz_0_synth_1 to finish...
+
+*** Running vivado
+    with args -log clk_wiz_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source clk_wiz_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2654.141 ; gain = 115.984 ; free physical = 6311 ; free virtual = 19744
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0
+Command: synth_design -top clk_wiz_0 -part xc7z020clg484-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13155
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3416.312 ; gain = 376.801 ; free physical = 5268 ; free virtual = 18706
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v:68]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:68]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/scripts/rt/data/unisim_comp.v:71768]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/scripts/rt/data/unisim_comp.v:71768]
+INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/scripts/rt/data/unisim_comp.v:109413]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 42 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE bound to: 105 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'PLLE2_ADV' (0#1) [/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/scripts/rt/data/unisim_comp.v:109413]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1519]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/scripts/rt/data/unisim_comp.v:1519]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (0#1) [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v:68]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3491.250 ; gain = 451.738 ; free physical = 5190 ; free virtual = 18630
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3506.094 ; gain = 466.582 ; free physical = 5176 ; free virtual = 18616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3506.094 ; gain = 466.582 ; free physical = 5176 ; free virtual = 18616
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3512.031 ; gain = 0.000 ; free physical = 5165 ; free virtual = 18606
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'inst'
+Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/clk_wiz_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/clk_wiz_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/clk_wiz_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/clk_wiz_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3563.023 ; gain = 0.000 ; free physical = 5123 ; free virtual = 18577
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.1 . Memory (MB): peak = 3563.023 ; gain = 0.000 ; free physical = 5123 ; free virtual = 18577
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5148 ; free virtual = 18603
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5144 ; free virtual = 18599
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/clk_wiz_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5144 ; free virtual = 18599
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5144 ; free virtual = 18599
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5151 ; free virtual = 18606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5144 ; free virtual = 18606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5141 ; free virtual = 18603
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5134 ; free virtual = 18596
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5136 ; free virtual = 18598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5141 ; free virtual = 18603
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5141 ; free virtual = 18603
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5141 ; free virtual = 18603
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5141 ; free virtual = 18603
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5141 ; free virtual = 18603
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |PLLE2_ADV |     1|
+|3     |IBUF      |     1|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5141 ; free virtual = 18603
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3563.023 ; gain = 466.582 ; free physical = 5141 ; free virtual = 18603
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 3563.023 ; gain = 523.512 ; free physical = 5141 ; free virtual = 18603
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3563.023 ; gain = 0.000 ; free physical = 5140 ; free virtual = 18603
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3563.023 ; gain = 0.000 ; free physical = 5407 ; free virtual = 18872
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: a1d89eaf
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 3563.023 ; gain = 871.195 ; free physical = 5407 ; free virtual = 18872
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2929.102; main = 2618.000; forked = 361.852
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 5137.039; main = 3547.020; forked = 1590.020
+INFO: [Common 17-1381] The checkpoint '/home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP clk_wiz_0, cache-ID = 8cb3f9ae3c351924
+INFO: [Common 17-1381] The checkpoint '/home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file clk_wiz_0_utilization_synth.rpt -pb clk_wiz_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 22 16:53:22 2025...
+[Tue Jul 22 16:53:36 2025] clk_wiz_0_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:10 ; elapsed = 00:01:30 . Memory (MB): peak = 10296.863 ; gain = 23.910 ; free physical = 7819 ; free virtual = 21285
+synth_design -top top -part xc7z020clg484-2 -lint 
+Command: synth_design -top top -part xc7z020clg484-2 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 10647.621 ; gain = 349.754 ; free physical = 7474 ; free virtual = 20940
+---------------------------------------------------------------------------------
+Clean up Linter database...
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/hhussien/fpga_assignment/assignment_1/counter/.Xil/Vivado-6535-hhussien-lx01.engeu1.analog.com/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [/home/hhussien/fpga_assignment/assignment_1/counter/.Xil/Vivado-6535-hhussien-lx01.engeu1.analog.com/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/clock_divider.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (2#1) [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/clock_divider.v:24]
+INFO: [Synth 8-6157] synthesizing module 'counter_3bits' [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/counter_3bits.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'counter_3bits' (3#1) [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/counter_3bits.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top' (4#1) [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 10718.840 ; gain = 420.973 ; free physical = 7393 ; free virtual = 20860
+---------------------------------------------------------------------------------
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Tue Jul 22 16:53:44 2025
+| Host         : hhussien-lx01.engeu1.analog.com running 64-bit Red Hat Enterprise Linux release 8.8 (Ootpa)
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+RTL Linter Report
+
+Table of Contents
+-----------------
+1. Summary
+
+1. Summary
+----------
+
++---------+--------------+----------+
+| Rule ID | # Violations | # Waived |
++---------+--------------+----------+
+
+
+INFO: [Synth 37-85] Total of 0 linter message(s) generated.
+INFO: [Synth 37-45] Linter Run Finished!
+INFO: [Project 1-454] Reading design checkpoint '/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'PLL'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10748.527 ; gain = 0.000 ; free physical = 7372 ; free virtual = 20838
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'PLL/inst'
+Finished Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'PLL/inst'
+Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'PLL/inst'
+Finished Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'PLL/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc]
+CRITICAL WARNING: [Common 17-165] Too many positional options when parsing 'port>', please type 'get_ports -help' for usage info. [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc:3]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 33]]'. [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc:44]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc:49]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 35]]'. [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc:54]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 13]]'. [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc:57]
+Finished Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10772.539 ; gain = 0.000 ; free physical = 7354 ; free virtual = 20821
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 4 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 10772.539 ; gain = 475.676 ; free physical = 7364 ; free virtual = 20830
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] 
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] 
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'top'
+INFO: [Vivado 12-12490] The selected simulation model for 'clk_wiz_0' IP changed to 'rtl' from '', the simulation run directory will be deleted.
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj top_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/counter_3bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter_3bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_behav xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_behav xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=42,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.clock_divider
+Compiling module xil_defaultlib.counter_3bits
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "top_behav -key {Behavioral:sim_1:Functional:top} -tclbatch {top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 10800.371 ; gain = 27.832 ; free physical = 7313 ; free virtual = 20813
+add_force {/top/rst} -radix hex {0 0ns}
+add_force {/top/clk} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 10 ns
+run 10 ns
+run 3 ns
+add_force {/top/rst} -radix hex {1 0ns}
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+set_property -dict [list \
+  CONFIG.RESET_PORT {resetn} \
+  CONFIG.RESET_TYPE {ACTIVE_LOW} \
+] [get_ips clk_wiz_0]
+generate_target all [get_files  /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0
+export_ip_user_files -of_objects [get_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/clk_wiz_0_synth_1
+
+launch_runs clk_wiz_0_synth_1 -jobs 3
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0
+[Tue Jul 22 16:58:17 2025] Launched clk_wiz_0_synth_1...
+Run output will be captured here: /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory /home/hhussien/fpga_assignment/assignment_1/counter/counter.ip_user_files/sim_scripts -ip_user_files_dir /home/hhussien/fpga_assignment/assignment_1/counter/counter.ip_user_files -ipstatic_source_dir /home/hhussien/fpga_assignment/assignment_1/counter/counter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/modelsim} {questa=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/questa} {xcelium=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/xcelium} {vcs=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/vcs} {riviera=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'top'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj top_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/counter_3bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter_3bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_behav xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_behav xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'reset' on this module [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/top.v:34]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 10833.383 ; gain = 0.000 ; free physical = 7233 ; free virtual = 20745
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'top'
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj top_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/clock_divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock_divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/counter_3bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter_3bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_behav xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /cad/adi/apps/xilinx/vivado/2023.1/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot top_behav xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=42,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.clock_divider
+Compiling module xil_defaultlib.counter_3bits
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/hhussien/fpga_assignment/assignment_1/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "top_behav -key {Behavioral:sim_1:Functional:top} -tclbatch {top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 10884.406 ; gain = 50.832 ; free physical = 7232 ; free virtual = 20745
+add_force {/top/rst} -radix hex {0 0ns}
+add_force {/top/clk} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 50 ns
+add_force {/top/rst} -radix hex {1 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Tue Jul 22 17:27:08 2025] Launched synth_1...
+Run output will be captured here: /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/synth_1/runme.log
+[Tue Jul 22 17:27:08 2025] Launched impl_1...
+Run output will be captured here: /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+set_msg_config -suppress -id {Constraints 18-1056} 
+set_msg_config -suppress -id {Constraints 18-1055} 
+reset_run synth_1
+INFO: [Project 1-1160] Copying file /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/synth_1/top.dcp to /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/utils_1/imports/synth_1 and adding it to utils fileset
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Tue Jul 22 17:30:26 2025] Launched synth_1...
+Run output will be captured here: /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/synth_1/runme.log
+[Tue Jul 22 17:30:27 2025] Launched impl_1...
+Run output will be captured here: /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/impl_1/runme.log
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/utils_1/imports/synth_1/top.dcp with file /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Tue Jul 22 17:34:31 2025] Launched synth_1...
+Run output will be captured here: /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/synth_1/runme.log
+[Tue Jul 22 17:34:31 2025] Launched impl_1...
+Run output will be captured here: /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/impl_1/runme.log
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/utils_1/imports/synth_1/top.dcp with file /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Tue Jul 22 17:37:40 2025] Launched synth_1...
+Run output will be captured here: /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/synth_1/runme.log
+[Tue Jul 22 17:37:40 2025] Launched impl_1...
+Run output will be captured here: /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/impl_1/runme.log
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/utils_1/imports/synth_1/top.dcp with file /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/synth_1/top.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Tue Jul 22 17:45:38 2025] Launched synth_1...
+Run output will be captured here: /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/synth_1/runme.log
+[Tue Jul 22 17:45:38 2025] Launched impl_1...
+Run output will be captured here: /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/impl_1/runme.log
+set_msg_config -suppress -id {Vivado 12-584} 
+set_msg_config -suppress -id {Synth 8-7080} 
+set_msg_config -suppress -id {Synth 8-7080} 
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {Synth 8-7080}  -suppress '. The existing rule will be replaced.
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg484-2
+INFO: [Project 1-454] Reading design checkpoint '/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'PLL'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10884.406 ; gain = 0.000 ; free physical = 7100 ; free virtual = 20661
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'PLL/inst'
+Finished Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'PLL/inst'
+Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'PLL/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'PLL/inst'
+Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc]
+Finished Parsing XDC File [/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11265.613 ; gain = 0.000 ; free physical = 6860 ; free virtual = 20421
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 11369.031 ; gain = 484.625 ; free physical = 6780 ; free virtual = 20343
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs
+reset_run impl_1
+launch_runs impl_1 -jobs 3
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 11408.820 ; gain = 18.977 ; free physical = 6756 ; free virtual = 20315
+[Tue Jul 22 17:49:36 2025] Launched impl_1...
+Run output will be captured here: /home/hhussien/fpga_assignment/assignment_1/counter/counter.runs/impl_1/runme.log
+close_design
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11408.820 ; gain = 0.000 ; free physical = 6757 ; free virtual = 20318
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 11408.820 ; gain = 0.000 ; free physical = 6755 ; free virtual = 20316
+Restored from archive | CPU: 0.040000 secs | Memory: 0.029198 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 11408.820 ; gain = 0.000 ; free physical = 6755 ; free virtual = 20316
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11408.820 ; gain = 0.000 ; free physical = 6755 ; free virtual = 20316
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs
+report_utilization -name utilization_1
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 22 17:59:26 2025...

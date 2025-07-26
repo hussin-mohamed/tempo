@@ -1,0 +1,2 @@
+Time resolution is 1 ps
+$stop called at time : 50020 ns : File "/home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sim_1/new/tb.v" Line 37
