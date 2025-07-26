@@ -1,0 +1,240 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Jul 22 16:30:58 2025
+# Process ID: 6535
+# Current directory: /home/hhussien/fpga_assignment/assignment_1/counter
+# Command line: vivado
+# Log file: /home/hhussien/fpga_assignment/assignment_1/counter/vivado.log
+# Journal file: /home/hhussien/fpga_assignment/assignment_1/counter/vivado.jou
+# Running On: hhussien-lx01.engeu1.analog.com, OS: Linux, CPU Frequency: 2793.437 MHz, CPU Physical cores: 6, Host memory: 16494 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/hhussien/fpga_assignment/assignment_1/counter/counter.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source clock_divider.tcl
+add_force {/clock_divider/clk} -radix hex {1 0ns} {0 62500ps} -repeat_every 125000ps
+add_force {/clock_divider/rst} -radix hex {0 0ns}
+run 250 ns
+run 125 ns
+run 100 ns
+add_force {/clock_divider/rst} -radix hex {1 0ns}
+run 1250 ns
+run 1250 ns
+close_sim
+file mkdir /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1
+file mkdir /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new
+close [ open /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc w ]
+add_files -fileset constrs_1 /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/constrs_1/new/cons1.xdc
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0
+set_property -dict [list \
+  CONFIG.CLKOUT1_DRIVES {BUFG} \
+  CONFIG.CLKOUT1_JITTER {449.895} \
+  CONFIG.CLKOUT1_PHASE_ERROR {310.955} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {8} \
+  CONFIG.CLKOUT2_DRIVES {BUFG} \
+  CONFIG.CLKOUT3_DRIVES {BUFG} \
+  CONFIG.CLKOUT4_DRIVES {BUFG} \
+  CONFIG.CLKOUT5_DRIVES {BUFG} \
+  CONFIG.CLKOUT6_DRIVES {BUFG} \
+  CONFIG.CLKOUT7_DRIVES {BUFG} \
+  CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {42} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {105} \
+  CONFIG.MMCM_COMPENSATION {ZHOLD} \
+  CONFIG.MMCM_DIVCLK_DIVIDE {5} \
+  CONFIG.PRIMITIVE {PLL} \
+] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory /home/hhussien/fpga_assignment/assignment_1/counter/counter.ip_user_files/sim_scripts -ip_user_files_dir /home/hhussien/fpga_assignment/assignment_1/counter/counter.ip_user_files -ipstatic_source_dir /home/hhussien/fpga_assignment/assignment_1/counter/counter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/modelsim} {questa=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/questa} {xcelium=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/xcelium} {vcs=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/vcs} {riviera=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close [ open /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/counter_3bits.v w ]
+add_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/counter_3bits.v
+update_compile_order -fileset sources_1
+close [ open /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/top.v w ]
+add_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/new/top.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs clk_wiz_0_synth_1
+wait_on_run clk_wiz_0_synth_1
+synth_design -top top -part xc7z020clg484-2 -lint 
+launch_simulation
+source top.tcl
+add_force {/top/rst} -radix hex {0 0ns}
+add_force {/top/clk} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 10 ns
+run 10 ns
+run 3 ns
+add_force {/top/rst} -radix hex {1 0ns}
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+set_property -dict [list \
+  CONFIG.RESET_PORT {resetn} \
+  CONFIG.RESET_TYPE {ACTIVE_LOW} \
+] [get_ips clk_wiz_0]
+generate_target all [get_files  /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1 -jobs 3
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files /home/hhussien/fpga_assignment/assignment_1/counter/counter.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory /home/hhussien/fpga_assignment/assignment_1/counter/counter.ip_user_files/sim_scripts -ip_user_files_dir /home/hhussien/fpga_assignment/assignment_1/counter/counter.ip_user_files -ipstatic_source_dir /home/hhussien/fpga_assignment/assignment_1/counter/counter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/modelsim} {questa=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/questa} {xcelium=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/xcelium} {vcs=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/vcs} {riviera=/home/hhussien/fpga_assignment/assignment_1/counter/counter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+launch_simulation
+source top.tcl
+add_force {/top/rst} -radix hex {0 0ns}
+add_force {/top/clk} -radix hex {1 0ns} {0 5000ps} -repeat_every 10000ps
+run 50 ns
+add_force {/top/rst} -radix hex {1 0ns}
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+run 1000 ns
+close_sim
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+set_msg_config -suppress -id {Constraints 18-1056} 
+set_msg_config -suppress -id {Constraints 18-1055} 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+set_msg_config -suppress -id {Vivado 12-584} 
+set_msg_config -suppress -id {Synth 8-7080} 
+set_msg_config -suppress -id {Synth 8-7080} 
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run impl_1
+launch_runs impl_1 -jobs 3
+wait_on_run impl_1
+close_design
+open_run impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_utilization -name utilization_1
+close_project
